@@ -1,7 +1,7 @@
 #实现查准率、召回率与F1的计算。
-def tf_confusion_metrics(model, actual_clases, session, feed_dict):
+def tf_confusion_metrics(model, actual_classes, session, feed_dict):
     predictions = tf.argmax(model, 1)
-    actuals = tf.argmax(actual_clases, 1)
+    actuals = tf.argmax(actual_classes, 1)
 
     ones_like_actuals = tf.ones_like(actuals)
     zeros_like_actuals = tf.zeros_like(actuals)
